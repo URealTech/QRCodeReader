@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="qrReader.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+
+            <BoxView HeightRequest="10"/>
+
+            <Image HorizontalOptions="Center" 
+                   VerticalOptions="Start" 
+                   WidthRequest="300" 
+                   Source="Logo.png"/>
+
+            <Frame BackgroundColor="#BF043055" HasShadow="False">
+                <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical" Spacing="10">
+                    <Entry x:Name="Email" 
+                           Text="{Binding Email}" 
+                           Placeholder="Email"   
+                           PlaceholderColor="White" 
+                           HeightRequest="40"   
+                           Keyboard="Email"  
+                           TextColor="White"/>
+
+                    <Entry x:Name="Password" 
+                           Text="{Binding Password}" 
+                           Placeholder="Password"   
+                           PlaceholderColor="White" 
+                           HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="White"/>
+                </StackLayout>
+            </Frame>
+
+            <Button x:Name="loginSubmitButton"
+                    Command="{Binding SubmitCommand}"
+                    Text="Login" 
+                    TextColor="White"  
+                    FontAttributes="Bold" 
+                    FontSize="Large" 
+                    HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#BF043055"
+                    Clicked="loginSubmitButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="qrReader.Views.AboutPage"
+             xmlns:vm="clr-namespace:qrReader.ViewModels" 
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Margin="0">
+
+        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" RowSpacing="0">
+            <zxing:ZXingScannerView x:Name="zxing"
+                                    IsScanning="True"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    WidthRequest="300"
+                                    HeightRequest="500"/>
+            <zxing:ZXingDefaultOverlay TopText="QRCode'u çerçeve içinde hizalayın"/>
+        </Grid>
+
+        <Label x:Name="lblResult" 
+               IsVisible="false" />
+
+        <Label x:Name="lblDecrypt"
+               FontSize="Large"
+               FontAttributes="Bold"
+               HeightRequest="90"
+               IsVisible="true" />
+
+        <Button x:Name="addButton"
+                Text="Kaydet"
+                Clicked="addButton_Clicked" />
+
+        <Button x:Name="clearButton"
+                Text="Temizle"
+                Clicked="clearButton_Clicked" />
+
+    </StackLayout>
+</ContentPage>
