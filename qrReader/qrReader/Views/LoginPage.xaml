@@ -17,7 +17,7 @@
                    WidthRequest="300" 
                    Source="Logo.png"/>
 
-            <Frame BackgroundColor="#BF043055" HasShadow="False">
+            <Frame BackgroundColor="Black" HasShadow="False">
                 <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical" Spacing="10">
                     <Entry x:Name="Email" 
                            Text="{Binding Email}" 
@@ -44,7 +44,7 @@
                     FontAttributes="Bold" 
                     FontSize="Large" 
                     HorizontalOptions="FillAndExpand"  
-                    BackgroundColor="#BF043055"
+                    BackgroundColor="Black"
                     Clicked="loginSubmitButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

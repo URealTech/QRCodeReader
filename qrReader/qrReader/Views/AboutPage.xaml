@@ -38,11 +38,15 @@
                IsVisible="true" />
 
         <Button x:Name="addButton"
+                BackgroundColor="Black"
                 Text="Save"
+                TextColor="White"
                 Clicked="addButton_Clicked" />
 
         <Button x:Name="clearButton"
+                BackgroundColor="Black"
                 Text="Clean"
+                TextColor="White"
                 Clicked="clearButton_Clicked" />
 
     </StackLayout>

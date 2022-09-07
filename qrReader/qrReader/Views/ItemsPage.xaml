@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="qrReader.Views.ItemsPage"
-             Title="History"
+             Title="{Binding Title}"
              xmlns:local="clr-namespace:qrReader.ViewModels"  
              xmlns:model="clr-namespace:qrReader.Models"
              x:Name="BrowseItemsPage">
@@ -22,13 +22,17 @@
         </ListView>
 
         <Button x:Name="showButton"
-                    Text="Refresh"
-                    Clicked="showButton_Clicked" />
+                BackgroundColor="Black"
+                Text="Refresh"
+                TextColor="White"
+                Clicked="showButton_Clicked" />
 
         <Button x:Name="deleteButton"
-                    WidthRequest="100"
-                    Text="Remove"
-                    Clicked="deleteButton_Clicked" />
+                BackgroundColor="Black"
+                WidthRequest="100"
+                Text="Remove"
+                TextColor="White"
+                Clicked="deleteButton_Clicked" />
 
     </StackLayout>
 
