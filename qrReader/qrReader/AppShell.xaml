@@ -65,10 +65,10 @@
         <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>
 
-    <FlyoutItem Title="QRCode Oku" Icon="icon_qrCode.png">
+    <FlyoutItem Title="QRCode Read" Icon="icon_qrCode.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Geçmiş" Icon="history.png">
+    <FlyoutItem Title="History" Icon="history.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
 

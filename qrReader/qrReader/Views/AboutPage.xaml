@@ -25,7 +25,7 @@
                                     HorizontalOptions="FillAndExpand"
                                     WidthRequest="300"
                                     HeightRequest="500"/>
-            <zxing:ZXingDefaultOverlay TopText="QRCode'u çerçeve içinde hizalayın"/>
+            <zxing:ZXingDefaultOverlay TopText="Align QR Code in frame"/>
         </Grid>
 
         <Label x:Name="lblResult" 
@@ -38,11 +38,11 @@
                IsVisible="true" />
 
         <Button x:Name="addButton"
-                Text="Kaydet"
+                Text="Save"
                 Clicked="addButton_Clicked" />
 
         <Button x:Name="clearButton"
-                Text="Temizle"
+                Text="Clean"
                 Clicked="clearButton_Clicked" />
 
     </StackLayout>

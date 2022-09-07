@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="qrReader.Views.ItemsPage"
-             Title="Geçmiş"
+             Title="History"
              xmlns:local="clr-namespace:qrReader.ViewModels"  
              xmlns:model="clr-namespace:qrReader.Models"
              x:Name="BrowseItemsPage">
@@ -22,12 +22,12 @@
         </ListView>
 
         <Button x:Name="showButton"
-                    Text="Yenile"
+                    Text="Refresh"
                     Clicked="showButton_Clicked" />
 
         <Button x:Name="deleteButton"
                     WidthRequest="100"
-                    Text="Sil"
+                    Text="Remove"
                     Clicked="deleteButton_Clicked" />
 
     </StackLayout>

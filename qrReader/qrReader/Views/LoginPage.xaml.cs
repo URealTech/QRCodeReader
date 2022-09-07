@@ -13,7 +13,7 @@ namespace qrReader.Views
             InitializeComponent();
             var vm = new LoginViewModel();
             this.BindingContext = new LoginViewModel();
-            vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Hata", "Geçersiz Email & şifre, tekrar deneyin", "Tamam");
+            vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Email and password, try again", "Okay");
 
             Email.Completed += (object sender, EventArgs e) =>
             {
